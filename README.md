@@ -10,10 +10,10 @@ Dynamically Grouping the face images acquired from the camera with the learned m
 ## Requirements
 
 ### main.py
-python27 @2.7.12_1, chainer @1.20.0.1_0, py27-numpy @1.11.1_0+gfortran and py27-matplotlib @1.5.1_1+cairo+tkinter
+python27 @2.7.12_1, chainer @1.20.0.1_0+hdf5, py27-numpy @1.11.1_0+gfortran and py27-matplotlib @1.5.1_1+cairo+tkinter
 
 ### main_cap.py
-python27 @2.7.12_1, chainer @1.20.0.1_0, py27-numpy @1.11.1_0+gfortran and opencv @3.2.0_1+contrib+java+python27+qt4+vtk
+python27 @2.7.12_1, chainer @1.20.0.1_0+hdf5, py27-numpy @1.11.1_0+gfortran and opencv @3.2.0_1+contrib+java+python27+qt4+vtk
 
 ## Install
 
