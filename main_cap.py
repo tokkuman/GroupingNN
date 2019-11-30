@@ -25,6 +25,7 @@ print 'GPU: {}'.format(args.gpu)
 if __name__ == '__main__':
 
     group = ['Ravenclaw', 'Gryffindor', 'Hufflpuff', 'Slytherin']
+    #group = ['Others', 'FunaLab', 'Others', 'FunaLab']
 
     model = Model()
     if not args.model == '0':

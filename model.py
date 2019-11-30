@@ -23,11 +23,14 @@ class Model(Chain):
         )
 
     def __call__(self, x, train=True):
+        chainer.using_config = train
         h = F.max_pooling_2d(self.bn2(F.relu(self.conv1(x))), 3, stride=3)
         h = F.max_pooling_2d(self.bn4(F.relu(self.conv3(h))), 3, stride=3)
         h = F.max_pooling_2d(self.bn6(F.relu(self.conv5(h))), 2, stride=2)
-        h = F.dropout(F.relu(self.fc7(h)), train=train)
-        h = F.dropout(F.relu(self.fc8(h)), train=train)
+        h = F.dropout(F.relu(self.fc7(h)))
+        h = F.dropout(F.relu(self.fc8(h)))
+        #h = F.dropout(F.relu(self.fc7(h)), train=train)
+        #h = F.dropout(F.relu(self.fc8(h)), train=train)
         y = self.fc9(h)
         return y
 
